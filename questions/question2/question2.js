@@ -36,15 +36,24 @@ let arrayOfWords = [
  * @returns {boolean}
  */
 const hasWord = (word) => {
+	let sortedArray = arrayOfWords.sort();
 	let found = false // flag default value
-	for(let i=0; i < arrayOfWords.length; i++){
-		if(arrayOfWords[i].toLowerCase() === word.toLowerCase()){
-			found = true
-			document.getElementById(arrayOfWords[i]).style.backgroundColor = 'blue';
-			document.getElementById(arrayOfWords[i]).style.color = 'white';
-			document.getElementById(arrayOfWords[i]).innerHTML = `${arrayOfWords[i]}  found`;
+	let li = 0;
+	let hi = arrayOfWords.length -1;
+	let mi = Math.round(((li + hi) / 2));
+	while(li <= hi){
+		if(sortedArray[mi] === word){
+			found = true;
+			document.getElementById(arrayOfWords[mi]).style.backgroundColor = 'blue';
+			document.getElementById(arrayOfWords[mi]).style.color = 'white';
+			document.getElementById(arrayOfWords[mi]).innerHTML = `${arrayOfWords[mi]}  found`;
 			break;
+		}else if(sortedArray[mi] < word){
+			li = mi + 1;
+		}else{
+			hi = mi - 1;
 		}
+		mi = Math.round(((li + hi) / 2));
 	}
 	if(found === false){
 		alert("word not found")
@@ -67,7 +76,7 @@ const appendData = (data) => {
 }
 
 //print arrayfWords value
-appendData(arrayOfWords);
+appendData(arrayOfWords.sort());
 
 let button = document.getElementById('find');
 
