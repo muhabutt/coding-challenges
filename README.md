@@ -2,6 +2,7 @@
 
 - git clone https://github.com/muhabutt/alen-code-test.git
 - create a virtual host.
+* lksdjf
 ```
 #localhost ip	for example 127.0.0.12 alen-code-test.com or what ever you want
 <VirtualHost 127.0.0.12:80>

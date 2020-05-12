@@ -1,0 +1,36 @@
+{
+  "name": "Morse",
+  "authors": [{
+    "email": "mbutt1980@gmail.com",
+    "homepage": "https://webcodre.com",
+    "name": "Muhammad Kashif Zahid Butt",
+    "role": "Developer"
+  }
+  ],
+  "version": "0.1",
+  "type": "project",
+  "description": "Covert morse code into words",
+  "keywords": [
+    "Morse encoder",
+    "Morse decoder",
+    "Mark down formatter"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7.1.3",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Virta\\": "virta/"
+    },
+    "classmap": [
+      "Classes"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  }
+}
