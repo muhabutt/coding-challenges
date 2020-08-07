@@ -1,6 +1,6 @@
 ## Code test all answers are inside one project.
 
-- git clone https://github.com/muhabutt/alen-code-test.git
+- git clone https://github.com/muhabutt/coding-challenges.git
 - create a virtual host.
 * lksdjf
 ```
